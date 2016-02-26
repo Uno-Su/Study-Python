@@ -1,0 +1,20 @@
+# coding: utf-8
+# author: suwenbin
+import random
+
+guest_number = random.randint(10, 20)
+guest_count = 0
+while True:
+    input_number = int(input("Please guest a number:(10-20)"))
+    if guest_number > input_number:
+        print("Lower")
+        guest_count += 1
+    elif guest_number < input_number:
+        print("Upper")
+        guest_count += 1
+    else:
+        print("congratulations！ you win!")
+        break
+    if guest_count == 3:
+        print("Oops! you fail!")
+        break
